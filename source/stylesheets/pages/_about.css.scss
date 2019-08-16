@@ -1,0 +1,13 @@
+.about-wrapper {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  .about-container {
+    margin: auto;
+    text-align: center;
+    h1 {
+      font-size: 3vw;
+      font-weight: bold;
+    }
+  }
+}
