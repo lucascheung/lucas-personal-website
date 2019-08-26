@@ -9,6 +9,7 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   bannerScroll();
   aboutScroll();
+  trumpScroll();
 }
 
 
@@ -58,3 +59,16 @@ function aboutScroll() {
     tagline.innerHTML = aboutList[aboutIndex];
 
 }
+
+function trumpScroll() {
+  const trump = document.querySelector(".trump-wrapper");
+  const trumpHead = document.querySelector(".trump-head");
+  let distanceToTop = trump.getBoundingClientRect().top;
+  let distanceToTopFromBottom = trump.getBoundingClientRect().bottom;
+  let divRange = distanceToTopFromBottom - distanceToTop;
+  let movement = distanceToTop - divRange
+  console.log(distanceToTop);
+  let itemTranslate = Math.min(0, movement/2);
+  trumpHead.style.transform = `translateX(${-itemTranslate}px)`;
+}
+

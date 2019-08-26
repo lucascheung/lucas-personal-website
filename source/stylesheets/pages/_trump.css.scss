@@ -1,0 +1,16 @@
+.trump-wrapper  {
+  background: black;
+  position: relative;
+  height: 100vh;
+  .trump-head {
+    position: absolute;
+    left: 0;
+    z-index: 3;
+  }
+  .trump-desktop-container {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}

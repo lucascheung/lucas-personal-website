@@ -10,8 +10,10 @@
   }
   .giaraffe-title {
     position: absolute;
-    font-size: 3vw;
     top: 50%;
     left: 20px;
+    h1 {
+      font-size: 3vw;
+    }
   }
 }

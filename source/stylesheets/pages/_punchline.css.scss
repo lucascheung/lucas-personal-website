@@ -1,0 +1,17 @@
+
+.punchline-wrapper {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.punchline-container {
+  background: url(https://media.giphy.com/media/YnkuiP6WFNM2ezj0XV/giphy.gif);
+  background-size: cover;
+  background-position: top left;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 15vw;
+  font-weight: bold;
+  font-family: sans-serif;
+}
