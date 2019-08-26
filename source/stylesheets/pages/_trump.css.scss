@@ -3,6 +3,8 @@
   position: relative;
   height: 100vh;
   color: black;
+  width: 100vw;
+  overflow-x: hidden;
   .trump-head {
     position: absolute;
     left: 0;
