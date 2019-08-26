@@ -63,18 +63,25 @@ function aboutScroll() {
 function trumpScroll() {
   const trump = document.querySelector(".trump-wrapper");
   const trumpHead = document.querySelector(".trump-head");
-  const trumpFood = document.querySelector(".trump-food img");
+  const trumpFood = document.querySelector(".chosen img");
+  const trumpAllFood = document.querySelector(".trump-food-container")
   let distanceToTop = trump.getBoundingClientRect().top;
   let distanceToTopFromBottom = trump.getBoundingClientRect().bottom;
   let divRange = distanceToTopFromBottom - distanceToTop;
   let movement = distanceToTop - divRange
   console.log(distanceToTop);
   let itemTranslate = Math.min(0, movement/2);
-  trumpHead.style.transform = `translateX(${-itemTranslate}px)`;
-  if (distanceToTop < 0) {
-    trumpFood.style.display = 'none';
+  let mobileTranslate = itemTranslate + 300;
+  if (window.innerWidth > 500) {
+    trumpHead.style.transform = `translateX(${-itemTranslate}px)`;
+    if (distanceToTop < 0) {
+      trumpFood.style.display = 'none';
+    } else {
+      trumpFood.style.display = 'block';
+    }
   } else {
-    trumpFood.style.display = 'block';
+    trumpHead.style.transform = `translateX(-105px)`;
+    trumpAllFood.style.transform = `translateX(${mobileTranslate}px)`
   }
 }
 
