@@ -63,6 +63,7 @@ function aboutScroll() {
 function trumpScroll() {
   const trump = document.querySelector(".trump-wrapper");
   const trumpHead = document.querySelector(".trump-head");
+  const trumpFood = document.querySelector(".trump-food img");
   let distanceToTop = trump.getBoundingClientRect().top;
   let distanceToTopFromBottom = trump.getBoundingClientRect().bottom;
   let divRange = distanceToTopFromBottom - distanceToTop;
@@ -70,5 +71,10 @@ function trumpScroll() {
   console.log(distanceToTop);
   let itemTranslate = Math.min(0, movement/2);
   trumpHead.style.transform = `translateX(${-itemTranslate}px)`;
+  if (distanceToTop < 0) {
+    trumpFood.style.display = 'none';
+  } else {
+    trumpFood.style.display = 'block';
+  }
 }
 
