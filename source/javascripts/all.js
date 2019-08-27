@@ -74,7 +74,7 @@ function trumpScroll() {
   let mobileTranslate = itemTranslate + 300;
   if (window.innerWidth > 500) {
     trumpHead.style.transform = `translateX(${-itemTranslate}px)`;
-    if (distanceToTop < 0) {
+    if (distanceToTop < 100) {
       trumpFood.style.display = 'none';
     } else {
       trumpFood.style.display = 'block';
